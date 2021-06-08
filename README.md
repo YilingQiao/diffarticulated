@@ -8,7 +8,7 @@ This repo is working in progress.
 ```
 @inproceedings{Qiao2021Efficient,
 author  = {Qiao, Yi-Ling and Liang, Junbang and Koltun, Vladlen and Lin, Ming C.},
-title  = { Efficient Differentiable Simulation of Articulated Bodies},
+title  = {Efficient Differentiable Simulation of Articulated Bodies},
 booktitle = {ICML},
 year  = {2021},
 }
