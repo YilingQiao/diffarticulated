@@ -24,6 +24,7 @@ export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:$LD_LIBRARY_PATH"
 mkdir build
 cd build
 cmake ..
+make -j
 cd ..
 python setup.py install
 ```
