@@ -29,6 +29,7 @@ make -j
 cd ..
 python setup.py install
 ```
+If you do not have the `uuid` lib, you may install it by `apt-get install uuid-dev`. We will add `uuid` to the `third_party` directory shortly.
 
 3. Run the examples
 ## Examples
