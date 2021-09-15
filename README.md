@@ -9,7 +9,7 @@
 [[Code]](https://github.com/YilingQiao/diffarticulated)
 
 ## Setup
-0. This project was built with gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04).
+0. This project is still work-in-progress. It can be built with gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04), cmake 3.17.3, and CUDA 10.2 (only required for MBPO).
 1. Clone this repo and setup the python environment.
 ```bash
 git clone git@github.com:YilingQiao/diffarti_release_test.git
@@ -86,11 +86,11 @@ We place the RL code in another seperate repo. To run the
 ```bash
 git submodule init
 git submodule update
-git checkout master
 ```
 2. Install the packages for MBPO.
 ```bash
 cd diffarti_mbpo/
+git checkout master
 pip install -e viskit
 pip install -e .
 ```
