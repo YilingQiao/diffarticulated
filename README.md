@@ -98,7 +98,7 @@ pip install -e viskit
 pip install -e .
 ```
 3. Run the experiments.
-### Sample Enhancement
+### Policy Enhancement
 In `diffarti_mbpo/`, run the command
 ```bash
 chmod +x ./run_mbpo.sh
@@ -108,7 +108,7 @@ chmod +x ./run_mbpo.sh
 <img width="300px" src="https://github.com/YilingQiao/linkfiles/raw/master/icml21/pen.gif"> 
 </div>
 
-### Policy Enhancement
+### Sample Enhancement
 In `diffarti_mbpo/`, run the command
 ```bash
 ./run_mbpo.sh final_3 antours
