@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="pendulum">
+  <link name="world"/>
+  <material name="Blue">
+    <color rgba="0.28 0.52 0.92 1.0"/>
+  </material>
+
+
+
+  <joint name="jointfix" type="fixed">
+    <parent link="world"/>
+    <child link="link-1"/>
+    <dynamics damping="1.0" friction="0.0001"/>
+    <origin rpy="0.00000 -0.00000 0.00000" xyz="0 -0.1 -0.925"/>
+    <axis xyz="0.00000 0.00000 0.00000"/>
+  </joint>
+  <link name="link-1">
+    <visual>
+      <geometry>
+        <mesh filename="cube.obj" scale="0.05 0.05 0.05"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="Blue"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+         <box size="0.025 0.025 0.025"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.5 0"/>
+      <mass value="1."/>
+      <inertia ixx="0.00494875" ixy="0" ixz="0" iyy="0.00494174" iyz="0" izz="0.002219"/>
+    </inertial>
+  </link>
+
+  <link name="link0">
+    <visual>
+      <geometry>
+        <mesh filename="cube.obj" scale="0.05 0.5 0.05"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0.25 0"/>
+      <material name="Blue"/>
+    </visual>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.5 0"/>
+      <mass value="1."/>
+      <inertia ixx="0.00494875" ixy="0" ixz="0" iyy="0.00494174" iyz="0" izz="0.002219"/>
+    </inertial>
+  </link>
+  <joint name="joint0" type="continuous">
+    <parent link="world"/>
+    <child link="link0"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <dynamics damping="1.0" friction="1.0"/>
+  </joint>
+  <link name="link1">
+    <visual>
+      <geometry>
+        <mesh filename="cube.obj" scale="0.05 0.5 0.05"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0.25 0"/>
+      <material name="Red"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0.25 0"/>
+      <geometry>
+         <box size="0.025 0.25 0.025"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0.5 0"/>
+      <mass value="2.16"/>
+      <inertia ixx="0.00539427" ixy="0" ixz="0" iyy="0.0048979" iyz="0" izz="0.00311573"/>
+    </inertial>
+  </link>
+  <joint name="joint1" type="continuous">
+    <parent link="link0"/>
+    <child link="link1"/>
+    <origin rpy="0 0 0" xyz="0 0.5 0"/>
+    <axis xyz="1 0 0"/>
+    <dynamics damping="1.0" friction="1.0"/>
+  </joint>
+
+ 
+</robot>
+

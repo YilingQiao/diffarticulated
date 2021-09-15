@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="pendulum">
+  <!--
+  Author: Erwin Coumans <erwincoumans@google.com>
+  Contributers:
+-->
+  
+  <link name="world"/>
+  <material name="Blue">
+    <color rgba="0.28 0.52 0.92 1.0"/>
+  </material>
+  <link name="link0">
+    <visual>
+      <geometry>
+        <sphere radius="0.05"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0.5 0"/>
+      <material name="Blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.05"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0.5 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.5 0"/>
+      <mass value="1."/>
+      <inertia ixx="0.00494875" ixy="0" ixz="0" iyy="0.00494174" iyz="0" izz="0.002219"/>
+    </inertial>
+  </link>
+  <joint name="joint0" type="continuous">
+    <parent link="world"/>
+    <child link="link0"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <dynamics damping="1.0" friction="1.0"/>
+  </joint>
+  <link name="link1">
+    <visual>
+      <geometry>
+        <sphere radius="0.05"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0.5 0"/>
+      <material name="Red"/>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.05"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0.5 0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0.5 0"/>
+      <mass value="2.16"/>
+      <inertia ixx="0.00539427" ixy="0" ixz="0" iyy="0.0048979" iyz="0" izz="0.00311573"/>
+    </inertial>
+  </link>
+  <joint name="joint1" type="continuous">
+    <parent link="link0"/>
+    <child link="link1"/>
+    <origin rpy="0 0 0" xyz="0 0.5 0"/>
+    <axis xyz="1 0 0"/>
+    <dynamics damping="1.0" friction="1.0"/>
+  </joint>
+
+ <link name="link-1">
+    <visual>
+      <geometry>
+        <sphere radius="0.05"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0. 0"/>
+      <material name="Red"/>
+    </visual>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0. 0"/>
+      <mass value="0.01"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+  </link>
+  <joint name="jointfix" type="fixed">
+    <parent link="link1"/>
+    <child link="link-1"/>
+    <dynamics damping="1.0" friction="0.0001"/>
+    <origin rpy="0.00000 -0.00000 0.00000" xyz="0 0.5 0"/>
+    <axis xyz="0.00000 0.00000 0.00000"/>
+  </joint>
+</robot>
+

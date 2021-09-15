@@ -1,0 +1,56 @@
+<?xml version="0.0" ?>
+<robot name="urdf_box">
+
+
+  <link name="world">
+    <inertial>
+      <origin rpy="0.00000 -0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
+      <mass value="0.00000"/>
+      <inertia ixx="0.00000" ixy="0" ixz="0" iyy="0.00000" iyz="0" izz="0.00000"/>
+    </inertial>
+  </link>
+
+  <joint name="joint0" type="prismatic">
+    <parent link="world"/>
+    <child link="link_box"/>
+    <!-- <limit effort="1000.0" lower="-0.50000" upper="0.50000" velocity="0.5"/>    <dynamics damping="1.0" friction="0.0001"/> -->
+    <origin rpy="0.00000 -0.00000 0.00000" xyz="0.00000 0.00000 0.70000"/>
+    <axis xyz="0.00000 0.00000 1.00000"/>
+  </joint>
+
+  <link name="link_box">
+    <contact>
+      <friction_anchor/>
+      <stiffness value="300.0"/>
+      <damping value="10000.0"/>
+      <spinning_friction value="0.1"/>
+      <lateral_friction value="1.0"/>
+    </contact>
+
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value="10.0"/>
+       <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+                <mesh filename="textured_sphere_smooth.obj" scale="1 1 1"/>      
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+        <specular rgb="11 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <sphere radius="1"/>
+      </geometry>
+    </collision>
+  </link>
+
+
+
+</robot>
+
