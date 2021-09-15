@@ -1,4 +1,5 @@
 
+
 # Efficient Differentiable Simulation of Articulated Bodies
 
 *Yi-Ling Qiao, Junbang Liang, Vladlen Koltun, Ming C. Lin*
@@ -32,7 +33,7 @@ python setup.py install
 3. Run the examples
 ## Examples
 ### Start visualization
-We use `meshcat` to visualize the simulation. Please run the following command to start a session before the simulation.
+We use `meshcat` to visualize the simulation. Please run the following command to start a session ***before*** runing the simulation.
 ```bash
 meshcat-server --open
 ```
