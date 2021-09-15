@@ -12,8 +12,8 @@
 0. This project is still work-in-progress. It can be built with gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04), cmake 3.17.3, and CUDA 10.2 (only required for MBPO).
 1. Clone this repo and setup the python environment.
 ```bash
-git clone git@github.com:YilingQiao/diffarti_release_test.git
-cd diffarti_release_test
+git clone git@github.com:YilingQiao/diffarticulated.git
+cd diffarticulated
 conda env create -f gpu-env.yml
 conda activate diffarti_36
 export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:$LD_LIBRARY_PATH"
