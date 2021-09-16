@@ -6,7 +6,8 @@
 
 <!-- [[Project]](https://gamma.umd.edu/researchdirections/mlphysics/diffsim/) -->
 [[Paper]](http://proceedings.mlr.press/v139/qiao21a/qiao21a.pdf)
-<!-- [[Video]](https://icml.cc/virtual/2020/poster/5767) -->
+[[Video]](https://icml.cc/virtual/2021/poster/9049)
+[[Slides]](https://icml.cc/media/icml-2021/Slides/9049.pdf)
 [[Code]](https://github.com/YilingQiao/diffarticulated)
 
 ## Setup
@@ -84,7 +85,7 @@ python python/exp_car.py
 </div>
 
 ## Enhance RL with differentiable physics
-We place the RL code in another seperate repo. To run the 
+We place the RL code in another seperate [repo](https://github.com/YilingQiao/diffarti_mbpo).  
 1. Clone the submodule for RL.
 ```bash
 git submodule init
