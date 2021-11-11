@@ -70,7 +70,7 @@ def main(argv):
 
   knee_angle = -0.5
   abduction_angle = 0.2
-  init_q = torch.tensor([1,0,0,0,0,0,0.6,
+  init_q = torch.tensor([0,0,0,1,0,0,0.6,
                         0,0,0,0,0,0], dtype=torch.float32, requires_grad=True)
   init_qd = torch.tensor([0,0,0,1,0,0,
                         0,0,0,0,0,0], dtype=torch.float32, requires_grad=False)
