@@ -118,6 +118,18 @@ In `diffarti_mbpo/`, run the command
 <img width="300px" src="https://github.com/YilingQiao/linkfiles/raw/master/icml21/ant.gif"> 
 </div>
 
+## Our Related Repos
+Differentiable Soft Body Dynamics [Code](https://github.com/YilingQiao/diff_fem) [Paper](http://vladlen.info/publications/differentiable-simulation-soft-multi-body-systems/)
+*Differentiable Simulation of Soft Multi-body Systems. Yi-Ling Qiao, Junbang Liang, Vladlen Koltun, Ming C. Lin. (Neurips 2021)*
+
+Differentiable Articulated Body Dynamics [Code](https://github.com/YilingQiao/diffarticulated) [Paper](https://arxiv.org/abs/2109.07719)
+*Efficient Differentiable Simulation of Articulated Bodies. Yi-Ling Qiao, Junbang Liang, Vladlen Koltun, Ming C. Lin. (ICML 2021)*
+
+Differentiable Dynamics for Rigid Body and Cloth Coupling [Code](https://github.com/YilingQiao/diffsim) [Paper](https://arxiv.org/abs/2007.02168)
+*Scalable Differentiable Physics for Learning and Control. Yi-Ling Qiao, Junbang Liang, Vladlen Koltun, Ming C. Lin. (ICML 2020)*
+
+Differentiable Cloth Dynamics [Code](https://github.com/williamljb/DifferentiableCloth) [Paper](https://www.cs.umd.edu/~liangjb/docs/NIPS2019.pdf)
+*Differentiable Cloth Simulation for Inverse Problems. Junbang Liang, Ming C. Lin, Vladlen Koltun. (NeurIPS 2019)*
 
 ## Acknowledgments
 Thanks for the great open-source project [tiny-differentiable-simulatior](https://github.com/google-research/tiny-differentiable-simulator). This repo is derived from tinydiffsim. You might want to try the original tinydiffsim for its templatized auto-differentiation.
